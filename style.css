@@ -1,0 +1,348 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Definir uma fonte padrão melhor depois */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #f4f4f4; /* Cor temporária */
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Estilos adicionais para navegação */
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+header nav ul li a.cta-button {
+    background-color: #007bff; /* Cor primária temporária */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto 1rem;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.footer-section h3, .footer-section h4 {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Adicionar estilos responsivos depois */
+
+
+
+/* Estilos da Página Inicial */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #e9f5ff, #ffffff); /* Exemplo de gradiente suave */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Ajustar conforme necessário */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50; /* Cor mais escura para o título */
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.cta-button.primary, header nav ul li a.cta-button /* Estilo primário */ {
+    background-color: #007bff; /* Azul primário */
+    color: #fff;
+}
+
+.cta-button.primary:hover, header nav ul li a.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.cta-button.secondary:hover {
+    background-color: #e7f3ff;
+    transform: translateY(-2px);
+}
+
+/* Services Overview Section */
+.services-overview {
+    padding: 3rem 0;
+}
+
+.services-overview h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #2c3e50;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.service-card a {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+/* Social Proof Section */
+.social-proof {
+    background-color: #f8f9fa; /* Fundo levemente cinza */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.social-proof h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #2c3e50;
+}
+
+.proof-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.proof-item .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.proof-item p {
+    color: #555;
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #e9f5ff; /* Fundo azul claro */
+}
+
+.final-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.final-cta p {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Ajustes no Header e Footer */
+header .logo img {
+    display: block; /* Para controlar altura corretamente */
+}
+
+footer .footer-section.about img {
+    max-height: 40px; /* Ajustar logo no rodapé */
+    margin-bottom: 1rem;
+}
+
+/* Adicionar mais estilos e responsividade depois */
+
+
+/* Header Top Bar */
+.header-top-bar {
+    background-color: #e9ecef; /* Light grey background */
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.header-top-bar .container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+}
+
+.header-top-bar a {
+    color: #007bff; /* Primary blue */
+    text-decoration: none;
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-top-bar a:hover {
+    text-decoration: underline;
+}
+
+.header-top-bar svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.3rem;
+}
+
+/* Adjust main header padding if top bar is added */
+header nav {
+    padding-top: 0.5rem; /* Reduce top padding if top bar exists */
+    padding-bottom: 0.5rem;
+}
+
+/* Footer Contact Links */
+.footer-section.contact p a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section.contact p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+

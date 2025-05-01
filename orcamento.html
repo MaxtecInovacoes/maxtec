@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicite um orçamento personalizado para energia solar, aquecimento ou piscinas com a Maxtec Inovações. Atendemos Curitiba, PR e SC.">
+    <meta name="keywords" content="orçamento energia solar, orçamento aquecimento, orçamento piscina, Maxtec Inovações, Curitiba, Paraná, Santa Catarina">
+    <title>Orçamento | Maxtec Inovações</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <style>
+        /* Estilos específicos do formulário de orçamento (similar ao contato) */
+        .quote-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .quote-form input[type="text"],
+        .quote-form input[type="email"],
+        .quote-form input[type="tel"],
+        .quote-form input[type="number"],
+        .quote-form textarea,
+        .quote-form select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .quote-form textarea {
+            min-height: 100px;
+        }
+        .quote-form button {
+            margin-top: 1rem;
+        }
+        .form-section {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .form-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .form-section h3 {
+            margin-bottom: 1rem;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <img src="/images/logo-maxtec-vertical.png" alt="Maxtec Inovações Logo" height="50">
+            </a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/energia-solar/">Energia Solar</a></li>
+                <li><a href="/aquecimento/">Aquecimento</a></li>
+                <li><a href="/piscinas/">Piscinas</a></li>
+                <li><a href="/sobre/">Sobre Nós</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contato/">Contato</a></li>
+                <li><a href="/orcamento/" class="cta-button">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero" style="background-image: url("/images/hero-orcamento.jpg");"> <!-- Adicionar imagem de fundo relevante -->
+            <div class="container">
+                <h1>Solicite seu Orçamento Personalizado</h1>
+                <p>Preencha o formulário abaixo com o máximo de detalhes possível para receber uma proposta sob medida para suas necessidades.</p>
+            </div>
+        </section>
+
+        <section class="service-details">
+            <div class="container">
+                <form id="quote-form" class="quote-form" action="#" method="POST"> <!-- Configurar ação do formulário (ex: Formspree) -->
+
+                    <div class="form-section">
+                        <h3>1. Informações de Contato</h3>
+                        <div>
+                            <label for="name">Nome Completo:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Telefone/WhatsApp:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div>
+                            <label for="city">Cidade:</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div>
+                            <label for="state">Estado:</label>
+                            <select id="state" name="state" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="PR">Paraná (PR)</option>
+                                <option value="SC">Santa Catarina (SC)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>2. Serviço Desejado</h3>
+                        <div>
+                            <label for="service-type">Qual serviço você procura?</label>
+                            <select id="service-type" name="service-type" required>
+                                <option value="" disabled selected>Selecione o serviço</option>
+                                <option value="solar_residencial">Energia Solar Residencial</option>
+                                <option value="solar_comercial">Energia Solar Comercial</option>
+                                <option value="solar_industrial">Energia Solar Industrial</option>
+                                <option value="solar_agro">Energia Solar para Agronegócio</option>
+                                <option value="usina_solar">Usina Solar (Investimento)</option>
+                                <option value="aquecimento_solar">Aquecimento Solar de Água</option>
+                                <option value="aquecimento_gas">Aquecimento a Gás</option>
+                                <option value="aquecimento_piscina">Aquecimento para Piscinas</option>
+                                <option value="piscina_construcao">Construção/Reforma de Piscinas</option>
+                                <option value="piscina_equipamentos">Equipamentos para Piscinas</option>
+                                <option value="outro">Outro (Descreva abaixo)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section" id="solar-details" style="display: none;"> <!-- Mostrar apenas se for serviço solar -->
+                        <h3>3. Detalhes (Energia Solar)</h3>
+                        <div>
+                            <label for="avg-bill-solar">Valor Médio Mensal da Conta de Luz (R$):</label>
+                            <input type="number" id="avg-bill-solar" name="avg-bill-solar" placeholder="Ex: 350">
+                        </div>
+                        <div>
+                            <label for="roof-type">Tipo de Telhado (se aplicável):</label>
+                            <select id="roof-type" name="roof-type">
+                                <option value="" selected>Não sei informar / Não aplicável</option>
+                                <option value="ceramico">Cerâmico</option>
+                                <option value="fibrocimento">Fibrocimento</option>
+                                <option value="metalico">Metálico</option>
+                                <option value="laje">Laje</option>
+                                <option value="solo">Instalação no Solo</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>4. Mensagem Adicional</h3>
+                        <div>
+                            <label for="message">Descreva sua necessidade ou tire suas dúvidas:</label>
+                            <textarea id="message" name="message" placeholder="Forneça detalhes sobre o local, consumo, tipo de projeto desejado, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button primary">Enviar Solicitação de Orçamento</button>
+                    <p class="disclaimer" style="margin-top: 1rem;">*Para enviar o formulário, será necessário configurar um serviço externo como Formspree ou similar, pois este é um site estático.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé padrão (igual ao index.html) -->
+        <div class="footer-content">
+            <div class="footer-section about">
+                 <img src="/images/logo-maxtec-vertical.png" alt="Maxtec Inovações Logo" class="footer-logo">
+                 <p>Soluções inovadoras em energia e lazer desde 2010.</p>
+            </div>
+            <div class="footer-section links">
+                 <h4>Links Rápidos</h4>
+                 <ul>
+                     <li><a href="/energia-solar/">Energia Solar</a></li>
+                     <li><a href="/aquecimento/">Aquecimento</a></li>
+                     <li><a href="/piscinas/">Piscinas</a></li>
+                     <li><a href="/sobre/">Sobre Nós</a></li>
+                     <li><a href="/blog/">Blog</a></li>
+                     <li><a href="/contato/">Contato</a></li>
+                     <li><a href="/orcamento/">Orçamento</a></li>
+                 </ul>
+            </div>
+            <div class="footer-section contact">
+                 <h4>Contato</h4>
+                 <p>Curitiba, RMC, Litoral PR, SC, Oeste PR</p>
+                 <p><a href="tel:+554195134105">WhatsApp: (41) 99513-4105</a></p>
+                 <p><a href="mailto:adm@maxtecinovacoes.com.br">adm@maxtecinovacoes.com.br</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+             &copy; <span id="current-year"></span> Maxtec Inovações | Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Script para mostrar/ocultar detalhes de energia solar no formulário
+        const serviceTypeSelect = document.getElementById("service-type");
+        const solarDetailsSection = document.getElementById("solar-details");
+
+        if (serviceTypeSelect && solarDetailsSection) {
+            serviceTypeSelect.addEventListener("change", function() {
+                if (this.value.startsWith("solar_") || this.value === "usina_solar") {
+                    solarDetailsSection.style.display = "block";
+                } else {
+                    solarDetailsSection.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simule a economia e o retorno do investimento em energia solar para sua residência ou empresa com a calculadora solar da Maxtec Inovações.">
+    <meta name="keywords" content="calculadora solar, simulador energia solar, economia energia solar, payback solar, Curitiba, Paraná, Santa Catarina, Maxtec">
+    <title>Calculadora Solar | Maxtec Inovações</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <style>
+        /* Estilos específicos da calculadora */
+        .calculator-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .calculator-form input[type="number"],
+        .calculator-form select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .calculator-form button {
+            margin-top: 1rem;
+        }
+        .calculator-results {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #e9f5ff;
+            border-radius: 8px;
+            border: 1px solid #bce0fd;
+        }
+        .calculator-results h3 {
+            margin-bottom: 1rem;
+            color: #0056b3;
+        }
+        .calculator-results p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .calculator-results strong {
+            color: #007bff;
+        }
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <img src="/images/logo-maxtec-vertical.png" alt="Maxtec Inovações Logo" height="50">
+            </a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/energia-solar/">Energia Solar</a></li>
+                <li><a href="/aquecimento/">Aquecimento</a></li>
+                <li><a href="/piscinas/">Piscinas</a></li>
+                <li><a href="/sobre/">Sobre Nós</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contato/">Contato</a></li>
+                <li><a href="/orcamento/" class="cta-button">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-details">
+            <div class="container">
+                <h1>Calculadora Solar Maxtec</h1>
+                <p>Descubra o potencial de economia que a energia solar pode trazer para você! Preencha os campos abaixo para obter uma estimativa personalizada.</p>
+
+                <form id="solar-calculator-form" class="calculator-form">
+                    <div>
+                        <label for="avg-bill">Valor Médio Mensal da Conta de Luz (R$):</label>
+                        <input type="number" id="avg-bill" name="avg-bill" placeholder="Ex: 350" required min="50">
+                    </div>
+                    <div>
+                        <label for="region">Sua Região:</label>
+                        <select id="region" name="region" required>
+                            <option value="" disabled selected>Selecione a região</option>
+                            <option value="curitiba">Curitiba e RMC</option>
+                            <option value="litoral_pr">Litoral PR</option>
+                            <option value="oeste_pr">Oeste PR (Guarapuava e região)</option>
+                            <option value="sc_litoral_norte">SC (Litoral Norte/Joinville/Blumenau)</option>
+                            <option value="sc_florianopolis">SC (Grande Florianópolis)</option>
+                            <option value="sc_oeste">SC (Oeste)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-button primary">Calcular Economia</button>
+                </form>
+
+                <div id="calculator-results" class="calculator-results" style="display: none;">
+                    <h3>Estimativa Personalizada:</h3>
+                    <p>Sistema Fotovoltaico Estimado: <strong id="system-size">-- kWp</strong></p>
+                    <p>Economia Mensal Estimada: <strong id="monthly-savings">R$ --</strong></p>
+                    <p>Economia Anual Estimada: <strong id="annual-savings">R$ --</strong></p>
+                    <p>Tempo Estimado de Retorno (Payback): <strong id="payback-time">-- anos</strong></p>
+                    <p class="disclaimer">*Estes valores são apenas uma estimativa inicial. O dimensionamento preciso e o retorno do investimento dependem de fatores como irradiação solar exata no local, sombreamento, tarifas de energia vigentes, tipo de telhado e condições de financiamento. Entre em contato para um orçamento detalhado.</p>
+                    <a href="/orcamento/" class="cta-button secondary" style="margin-top: 1rem;">Solicitar Orçamento Detalhado</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé padrão (igual ao index.html) -->
+        <div class="footer-content">
+            <div class="footer-section about">
+                 <img src="/images/logo-maxtec-vertical.png" alt="Maxtec Inovações Logo" class="footer-logo">
+                 <p>Soluções inovadoras em energia e lazer desde 2010.</p>
+            </div>
+            <div class="footer-section links">
+                 <h4>Links Rápidos</h4>
+                 <ul>
+                     <li><a href="/energia-solar/">Energia Solar</a></li>
+                     <li><a href="/aquecimento/">Aquecimento</a></li>
+                     <li><a href="/piscinas/">Piscinas</a></li>
+                     <li><a href="/sobre/">Sobre Nós</a></li>
+                     <li><a href="/blog/">Blog</a></li>
+                     <li><a href="/contato/">Contato</a></li>
+                     <li><a href="/orcamento/">Orçamento</a></li>
+                 </ul>
+            </div>
+            <div class="footer-section contact">
+                 <h4>Contato</h4>
+                 <p>Curitiba, RMC, Litoral PR, SC, Oeste PR</p>
+                 <p><a href="tel:+554195134105">WhatsApp: (41) 99513-4105</a></p>
+                 <p><a href="mailto:adm@maxtecinovacoes.com.br">adm@maxtecinovacoes.com.br</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+             &copy; <span id="current-year"></span> Maxtec Inovações | Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="calculadora.js"></script> <!-- Script específico da calculadora -->
+</body>
+</html>
